@@ -18,9 +18,14 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Abel', sans-serif;
     }
 
+    a {
+        color: var(--medGray);
+    }
+
     body {
         margin: 0;
         padding: 0;
+        background: lemonchiffon;
 
         h1 {
             font-size: 2rem;
@@ -37,5 +42,62 @@ export const GlobalStyle = createGlobalStyle`
             font-size: 1rem;
             color: var(--white);
         }
+    }
+
+    #thumb-bg {
+        background: var(--medGray);
+        border-radius: 20px;
+        animation: animateThumb 0.5s;
+        transform: scale(1.0, 1.0);
+        transition: all 0.3s;
+
+        h1 {
+            text-align: center;
+            color: var(--lightGray);
+            text-transform: capitalize;
+        }
+
+        :hover {
+            box-shadow: 5px 5px 5px 5px grey;
+            transform: scale(1.05, 1.05);
+            transition: all 0.3s;
+        }
+
+        @keyframes animateThumb {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
+
+    #info-thumb-img
+    {
+        width: 400px;
+        height: 400px;
+        background: gold;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    #stats
+    {
+        background: mediumorchid;
+    }
+
+    #sprites
+    {
+        background: orchid;
+    }
+
+    #flavor
+    {
+        background: fuchsia;
+    }
+
+    #basic
+    {
+        background: darkmagenta;
     }
 `;
